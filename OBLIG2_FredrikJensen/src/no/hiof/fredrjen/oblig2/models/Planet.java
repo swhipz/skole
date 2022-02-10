@@ -7,7 +7,6 @@ public class Planet {
     private String planetName;
     private double planetRadius;
     private double planetMass;
-    private ArrayList<Planet> planets;
 
 
 
@@ -17,8 +16,6 @@ public class Planet {
         this.planetName = planetName;
         this.planetRadius = planetRadius;
         this.planetMass = planetMass;
-
-        planets = new ArrayList<>();
     }
     // lager gettere og settere -- se så pent å se på! NP.
  /*   public String getPlanetName(){return planetName; }
@@ -51,17 +48,11 @@ public class Planet {
     public void setPlanetMass(double planetMass) {
         this.planetMass = planetMass;
     }
-    public ArrayList<Planet> getPlanets() {
-        return planets;
-    }
-
-    public void setPlanets(ArrayList<Planet> planeter) {
-        this.planets = planeter;
-    }
 
     public void printPlanet(){
         System.out.println("Planet: " + getPlanetName() + "\n" +
                 "Planet radius: " + getPlanetRadius() + "\n" +
                 "Planet masse: " + getPlanetMass() + "\n");
+
     }
 }

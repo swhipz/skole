@@ -1,12 +1,12 @@
 package no.hiof.fredrjen.oblig2.models;
-
+import no.hiof.fredrjen.oblig2.models.Planet;
 import java.util.ArrayList;
 
 public class PlanetSystem {
     // planetsystem må være super-klassen i denne oppgaven.
     private String planetSystemName;
     private String centerStar;
-  //  private ArrayList<Planet> planets;
+    private ArrayList<Planet> planets;
 
 
     // lage konstruktør for planetsystem
@@ -14,7 +14,8 @@ public class PlanetSystem {
         this.planetSystemName = planetSystemName;
         this.centerStar = centerStar;
 
-   //     planets = new ArrayList<>();
+        planets = new ArrayList<>();
+
     }
 
     // må lage gettere og settere etc
@@ -35,12 +36,12 @@ public class PlanetSystem {
     public void setCenterStar(String centerStar) {
         this.centerStar = centerStar;
     }
-/*
+
     public ArrayList<Planet> getPlanets() {
         return planets;
     }
-
     public void setPlanets(ArrayList<Planet> planeter) {
         this.planets = planeter;
-    } */
+    }
+
 }
