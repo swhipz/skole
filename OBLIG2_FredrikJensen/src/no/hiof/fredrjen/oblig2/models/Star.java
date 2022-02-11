@@ -12,6 +12,10 @@ public class Star {
             this.starRadius = starRadius;
             this.starMass = starMass;
             this.starEffectiveTemp = starEffectiveTemp;
+        this.starName = starName;
+        this.starRadius = starRadius;
+        this.starMass = starMass;
+        this.starEffectiveTemp = starEffectiveTemp;
     }
     // skap gettere og settere for star
     // hurtig-generert med intellij pga cba - det holdt med planet
@@ -51,4 +55,15 @@ public class Star {
         return "\n" + "Stjerne: " + starName + "\n" + "Stjernradius: " + starRadius + "\n" + "Stjernemasse: " + starMass + "\n" + "Stjerne Effektiv Temperatur: " + starEffectiveTemp + "\n";
 
     }
+    // omregningsmetode for å returnere solens radius i kilometer
+    public double sunRadiusInKm(){
+        return starRadius * 695700;
+
+    }
+    // omregningsmetode for å returnere solens masse i kilogram
+    public double sunMassInKg(){
+        return starMass * 1.98892E30;
+
+    }
+
 }

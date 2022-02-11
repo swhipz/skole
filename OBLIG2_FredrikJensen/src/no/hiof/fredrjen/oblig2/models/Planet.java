@@ -54,4 +54,23 @@ public class Planet extends PlanetSystem{
     public String toString(){
         return "\n" + "Planet: " + planetName + "\n" + "Planet radius: " + planetRadius + "\n" + "Planet masse: " + planetMass + "\n";
     }
+
+    // omregning for å returnere radius i km
+    public double getPlanetRadiusInKm(){
+        return planetRadius * 71492;
+
+    }
+    // omregning for å returnere planetens masse i KG
+    public double getPlanetMassInKg(){
+        return planetMass * 1.898E27;
+    }
+
+    // finne surface gravity for planeter.
+    // inc stuk
+//
+
+    public double getOverflateGravitasjon(){
+        return (6.67408E-11 * getPlanetMassInKg()) / ((Math.pow(getPlanetRadiusInKm(), 2)*Math.pow(10, 6)));
+    }  //     grav.konstant*MASS / radius opphøyd ^2 gange 1million (quick maffs)
+
 }

@@ -9,15 +9,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // jeg må lage objekter av Planet-system, objekter av Planet og et objekt av Star.
-        // jeg gjør det først.
-
+        // jeg må lage objekt og arraylist av Planet-system, objekter av Planet og og et objekt av Star.
 
         PlanetSystem solarSystem = new PlanetSystem("Solsystemet", "Solen");
 
 
         //solsystemets planeter
-        Planet pMerkur = new Planet("Merkur", 0.03412549655905556, 1.7297154899894627E-4);
+        Planet merkur = new Planet("Merkur", 0.03412549655905556, 1.7297154899894627E-4);
         Planet venus = new Planet("Venus", 0.08465003077267387, 0.002564278187565859);
         Planet jorden = new Planet("Jorden", 0.08911486599899289, 0.003146469968387777);
         Planet mars = new Planet("Mars", 0.04741089912158004, 3.3667017913593256E-4);
@@ -29,32 +27,44 @@ public class Main {
 
         //lage stjernen
         Star solen = new Star("Solen", 1.0, 1.0, 5777);
-
-        // prøver å legge inn planeten på en annen måte
-        solarSystem.getPlanets().add(pMerkur);
+        //legger inn planetene i ArrayListen
+        solarSystem.getPlanets().add(merkur);
         solarSystem.getPlanets().add(venus);
         solarSystem.getPlanets().add(jorden);
+        solarSystem.getPlanets().add(mars);
         solarSystem.getPlanets().add(jupiter);
+        solarSystem.getPlanets().add(saturn);
+        solarSystem.getPlanets().add(uranus);
+        solarSystem.getPlanets().add(neptun);
+        // jeg er fult klar over at jeg kunne lagd objektene på en ryddigere måte utenom
+        // å kalle opp Planet planetkode = new Planet("", 1, 1);
+        // ettersom jeg allerede hadde skrevet opp disse. Ville ellers gjort slik: solarSystem.getPlanets().add(new Planet("Merkur".....)
 
-        System.out.println(solarSystem.getPlanets().size());
-        // ^her erkjenner terminalen hvertfall at det er 1 (!) objekt i listen
-        // ender ikke opp med null her men med en annen utskrift
-        System.out.println(solarSystem);
-        System.out.println(solen);
+        System.out.println("Antall Planeter i planetsystemet: " + solarSystem.getPlanets().size());
+        System.out.println("Liste over Planeter og informasjon om planetene: " + "\n" + "\n" + solarSystem);
         System.out.println(solarSystem.getPlanets());
 
-
-         for (Planet xPlanet : solarSystem.getPlanets()) {
+        System.out.println("Planetenes navn i rekkefølge er som følger:");
+        for (Planet xPlanet : solarSystem.getPlanets()) {
             System.out.println("Planetnavn: " + xPlanet.getPlanetName());
         }
+        System.out.println();
+        System.out.println();
+        // videre.
 
 
+        // print for saturns radius i km
+        System.out.println("Saturns radius i kilometer er: " + saturn.getPlanetRadiusInKm() + "km. " + "\n");
+        // print for saturns masse i kg
+        System.out.println("Saturns masse i kilogram er: " + saturn.getPlanetMassInKg() + "kg. " + "\n");
+        // print for solens radius i km
+        System.out.println("Solens radius i KM er: " + solen.sunRadiusInKm() + "km. " + "\n");
+        //print for solens masse i kg
+        System.out.println("Solens masse i KG er: " + solen.sunMassInKg() + "kg. " + "\n");
 
-        /*
-        for (int x = 0; x < planetsys.size(); x++) {
-            Planet xPlanet = planetsys.get(x);
-            System.out.println(xPlanet.getPlanetName());
-        }*/
+        // print ut overflategravitasjon (surfaceGravity)
+        System.out.println("Overflategravitasjonen på Neptun er: " + neptun.getOverflateGravitasjon() + " meter per sekund!");
+
 
 
     }
