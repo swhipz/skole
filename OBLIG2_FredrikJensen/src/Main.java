@@ -66,6 +66,13 @@ public class Main {
         System.out.println("Overflategravitasjonen på Neptun er: " + neptun.getOverflateGravitasjon() + " meter per sekund!");
 
 
+        System.out.println("bonusoppgave");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("Mars masse i Mearth: " + mars.getPlanetMassEarth() + ". ");
+        System.out.println("Mars radius i Rearth: " + mars.getPlanetRadiusEarth() + ". ");
+
 
     }
 }

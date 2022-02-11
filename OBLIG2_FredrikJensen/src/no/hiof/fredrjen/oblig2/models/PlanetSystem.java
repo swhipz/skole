@@ -45,9 +45,12 @@ public class PlanetSystem {
         this.planets = planeter;
     }
 
+
+
     @Override
     public String toString() {
         return "\n" + "Planetsystemet " + planetSystemName + " har en stjerne som heter " + centerStar + ", og har " + getPlanets().size() + " planeter i seg.";
 
     }
+
 }

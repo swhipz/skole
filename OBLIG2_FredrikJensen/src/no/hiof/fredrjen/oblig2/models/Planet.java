@@ -65,10 +65,17 @@ public class Planet extends PlanetSystem{
         return planetMass * 1.898E27;
     }
 
+    //bonusoppg. 3.1
+    public double getPlanetRadiusEarth(){
+        return planetRadius * 6371;
+    }
+    public double getPlanetMassEarth(){
+        return  planetMass * 5.972E24;
+    }
+
     // finne surface gravity for planeter.
     // inc stuk
 //
-
     public double getOverflateGravitasjon(){
         return (6.67408E-11 * getPlanetMassInKg()) / ((Math.pow(getPlanetRadiusInKm(), 2)*Math.pow(10, 6)));
     }  //     grav.konstant*MASS / radius opphøyd ^2 gange 1million (quick maffs)
