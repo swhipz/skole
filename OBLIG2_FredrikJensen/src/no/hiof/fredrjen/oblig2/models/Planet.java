@@ -2,7 +2,7 @@ package no.hiof.fredrjen.oblig2.models;
 
 import java.util.ArrayList;
 
-public class Planet {
+public class Planet extends PlanetSystem{
     // lag private instansvariabler for planet
     private String planetName;
     private double planetRadius;
@@ -13,6 +13,7 @@ public class Planet {
 
     // konstruktør for planeter
     public Planet(String Planetnavn, double Planetradius, double Planetmasse){
+        super("Solsystemet", "Solen");
         this.planetName = planetName;
         this.planetRadius = planetRadius;
         this.planetMass = planetMass;
@@ -49,10 +50,8 @@ public class Planet {
         this.planetMass = planetMass;
     }
 
-    public void printPlanet(){
-        System.out.println("Planet: " + getPlanetName() + "\n" +
-                "Planet radius: " + getPlanetRadius() + "\n" +
-                "Planet masse: " + getPlanetMass() + "\n");
-
+    @Override
+    public String toString(){
+        return "Planeten heter: " + planetName + "\n" + "Planetens radius: " + planetRadius + "\n" + "Planetens masse: " + planetMass + "\n";
     }
 }
