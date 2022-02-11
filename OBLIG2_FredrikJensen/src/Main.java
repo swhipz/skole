@@ -13,7 +13,7 @@ public class Main {
         // jeg gjør det først.
 
 
-        PlanetSystem solarSystem = new PlanetSystem("Solar system", "Solen");
+        PlanetSystem solarSystem = new PlanetSystem("Solsystemet", "Solen");
 
 
         //solsystemets planeter
@@ -31,7 +31,7 @@ public class Main {
         Star solen = new Star("Solen", 1.0, 1.0, 5777);
 
         // prøver å legge inn planeten på en annen måte
-        solarSystem.getPlanets().add(pMerkur.toString());
+        solarSystem.getPlanets().add(pMerkur);
         solarSystem.getPlanets().add(venus);
         solarSystem.getPlanets().add(jorden);
         solarSystem.getPlanets().add(jupiter);
@@ -39,12 +39,14 @@ public class Main {
         System.out.println(solarSystem.getPlanets().size());
         // ^her erkjenner terminalen hvertfall at det er 1 (!) objekt i listen
         // ender ikke opp med null her men med en annen utskrift
+        System.out.println(solarSystem);
+        System.out.println(solen);
         System.out.println(solarSystem.getPlanets());
 
 
-        /* for (Planet xPlanet : solarSystem.getPlanets()) {
-            System.out.println(xPlanet.getPlanetName());
-        }*/
+         for (Planet xPlanet : solarSystem.getPlanets()) {
+            System.out.println("Planetnavn: " + xPlanet.getPlanetName());
+        }
 
 
 

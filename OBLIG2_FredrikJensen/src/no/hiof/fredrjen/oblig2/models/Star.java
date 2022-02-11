@@ -7,7 +7,7 @@ public class Star {
     private double starMass;
     private int starEffectiveTemp;
     // må lage konstruktør for Star
-    public Star(String starName, double starRadius, double starMass, int starEffectiveTemperature) {
+    public Star(String starName, double starRadius, double starMass, int starEffectiveTemp) {
             this.starName = starName;
             this.starRadius = starRadius;
             this.starMass = starMass;
@@ -44,6 +44,11 @@ public class Star {
     }
 
     public void setsEffectiveTemp(int sEffectiveTemp) {
-        this.starEffectiveTemp = sEffectiveTemp;
+        this.starEffectiveTemp = sEffectiveTemp;}
+
+    @Override
+    public String toString(){
+        return "\n" + "Stjerne: " + starName + "\n" + "Stjernradius: " + starRadius + "\n" + "Stjernemasse: " + starMass + "\n" + "Stjerne Effektiv Temperatur: " + starEffectiveTemp + "\n";
+
     }
 }

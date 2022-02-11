@@ -10,7 +10,7 @@ public class PlanetSystem {
 
 
     // lage konstruktør for planetsystem
-    public PlanetSystem(String planetsystemnavn, String centerstjerne){
+    public PlanetSystem(String planetSystemName, String centerStar){
         this.planetSystemName = planetSystemName;
         this.centerStar = centerStar;
 
@@ -42,6 +42,12 @@ public class PlanetSystem {
     }
     public void setPlanets(ArrayList<Planet> planeter) {
         this.planets = planeter;
+    }
+
+    @Override
+    public String toString(){
+        return "\n" + "Planetsystemet: " + planetSystemName + " har en stjerne som heter: " + centerStar + ", og har " + getPlanets().size() + " planeter i seg.";
+
     }
 
 }

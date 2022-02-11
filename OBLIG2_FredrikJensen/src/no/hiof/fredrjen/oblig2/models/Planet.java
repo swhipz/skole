@@ -12,7 +12,7 @@ public class Planet extends PlanetSystem{
 
 
     // konstruktør for planeter
-    public Planet(String Planetnavn, double Planetradius, double Planetmasse){
+    public Planet(String planetName, double planetRadius, double planetMass){
         super("Solsystemet", "Solen");
         this.planetName = planetName;
         this.planetRadius = planetRadius;
@@ -52,6 +52,6 @@ public class Planet extends PlanetSystem{
 
     @Override
     public String toString(){
-        return "Planeten heter: " + planetName + "\n" + "Planetens radius: " + planetRadius + "\n" + "Planetens masse: " + planetMass + "\n";
+        return "\n" + "Planet: " + planetName + "\n" + "Planet radius: " + planetRadius + "\n" + "Planet masse: " + planetMass + "\n";
     }
 }
