@@ -1,8 +1,13 @@
 package no.hiof.fredrjen.models;
 
-import no.hiof.fredrjen.interfaces.FileHandler;
 
-public abstract class CelestialBody{
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+
+public abstract class CelestialBody implements Comparable<CelestialBody> {
     private String name;
     private double radius, mass;
 
@@ -13,11 +18,9 @@ public abstract class CelestialBody{
         this.radius = radius;
         this.mass = mass;
     }
-    //________________-----------------------_______________________------------
-    // oppgave 2.1
-
 
     public abstract double getMassInKg();
+
     public abstract double getRadiusInKm();
 
     public String getName() {
@@ -43,4 +46,21 @@ public abstract class CelestialBody{
     public void setMass(double mass) {
         this.mass = mass;
     }
+
+
+    //oppgave 2.1 -- mye styr for å få det vi gikk gjennom i forelesning til å fungere med dette
+
+    @Override
+    public int compareTo(CelestialBody o) {
+        int planet = 0;
+        String sort = "Sorting successful";
+        if (this.getRadius() < o.getRadius()) {
+            return -1;
+        } else if (this.getRadius() > o.getRadius()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 }

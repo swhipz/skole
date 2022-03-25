@@ -1,6 +1,9 @@
 package no.hiof.fredrjen.models;
 
-public abstract class NaturalSatellite extends CelestialBody {
+import java.io.File;
+import java.util.ArrayList;
+
+abstract class NaturalSatellite extends CelestialBody {
     private double semiMajorAxis, eccentricity, orbitalPeriod;
     private CelestialBody centralCelestialBody;
 
@@ -110,7 +113,16 @@ public abstract class NaturalSatellite extends CelestialBody {
 
     public void setCentralCelestialBody(CelestialBody centralCelestialBody) {
         this.centralCelestialBody = centralCelestialBody;
+
     }
 
-
 }
+
+
+
+
+
+
+
+
+

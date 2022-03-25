@@ -1,6 +1,9 @@
 package no.hiof.fredrjen.models;
 
-public class Planet extends NaturalSatellite{
+import java.io.File;
+import java.util.ArrayList;
+
+public class Planet extends NaturalSatellite {
     public static final double JUPITER_RADIUS_IN_KM = 71492;
     public static final double JUPITER_MASS_IN_KG = 1.898E27;
     public static final double EARTH_RADIUS_IN_KM = 6371;
@@ -20,6 +23,8 @@ public class Planet extends NaturalSatellite{
     public double getRadiusInKm() {
         return getRadius() * JUPITER_RADIUS_IN_KM;
     }
+
+
 
     private double getRadiusInMeter() {
         return getRadiusInKm() * 1000;
@@ -42,6 +47,7 @@ public class Planet extends NaturalSatellite{
     public String toString() {
         return String.format("%s has a radius of %s Rjup and a mass of %s Mjup", getName(), getRadius(), getMass());
     }
+
 
 
 }

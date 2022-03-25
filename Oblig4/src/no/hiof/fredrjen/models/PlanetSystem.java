@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class PlanetSystem implements Comparable<PlanetSystem>{
+public class PlanetSystem{
     private String name;
     private Star centerStar;
     private ArrayList<Planet> planets = new ArrayList<>();
@@ -107,16 +107,5 @@ Test at du kan sortere listen med planeter i solsystemet vi opprettet i Oblig 3.
 
      */
 
-    @Override
-    public int compareTo(PlanetSystem o) {
-        int planet = 0;
-        if (this.planets.get(planet).getRadiusInKm() < o.planets.get(planet).getRadiusInKm()){
-            return 1;
-        } else if (this.planets.get(planet).getRadiusInKm() > o.planets.get(planet).getRadiusInKm()){
-            return -1;
-        }else{
-            return 0;
-        }
 
-    }
 }
