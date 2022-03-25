@@ -20,7 +20,7 @@ public class box_Start extends JFrame {
         this.setContentPane(mainPanel);
         this.pack();
 
-        if (lagreButton.is
+
         if (jobbetIDagCheckBox.isSelected()) {
             System.out.println("Jeg har jobbet idag, og kan derfor trekke fra omlag 400 kcal fra dagens regnestykke");
 

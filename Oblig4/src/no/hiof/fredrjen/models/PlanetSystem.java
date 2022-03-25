@@ -92,20 +92,6 @@ public class PlanetSystem{
                 " planets that revolve around the star " +
                 centerStar.getName();
     }
-    //----______-----______Oppgave 2.1 ______----------_____--
-    // initialiserer compareto-implementasjonen
-
-
-    /*
-    Oppgave 2.1 - Sammenligning og sortering
-
-Det er ofte naturlig å kunne sortere samlinger av objekter. Lag en naturlig sortering ved å
- implementere Comparable-interfacet som følger med i Java i klassene CelestialBody og PlanetSystem.
-  Du velger selv hva du ser på som en naturlig sortering for hver av disse. Altså hva de sorteres basert på,
-   og om de sorteres fra større til mindre eller motsatt. (Dette trengs ikke gjøres komplisert).
-Test at du kan sortere listen med planeter i solsystemet vi opprettet i Oblig 3.
-
-     */
 
 
 }

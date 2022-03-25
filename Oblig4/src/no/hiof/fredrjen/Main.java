@@ -56,11 +56,11 @@ public class Main{
 
         // 2 . 1
 //________________________________________________________________________________________________________________________________
-        System.out.println("--- Oppgave 2.1 : ---" + "\n");
+        System.out.println("\n **************||| Oppgave 2.1  |||*************\n" );
 
         // sorteringen går per koden i CelestialBody (linje 45++) etter radiusverdien av planetene.
         ArrayList<Planet> planets = solarSystem.getPlanets();
-        System.out.println("Planetenes rekkefølge før sortering etter radius: ");
+        System.out.println(" \n **Planetenes rekkefølge før sortering etter radius:** ");
 
         for (Planet p: planets) {
             System.out.println(p);
@@ -69,12 +69,12 @@ public class Main{
 
         Collections.sort(planets);
 
-        // print ut planetene etter hverandre og ikke på en linje (tidligere problem)
-        System.out.println("Objektene er her sortert etter størrelse: ");
+        // print ut planetene etter hverandre og ikke på en linje (tidligere problem jeg strevet med hehhe)
+        System.out.println("\n** Objektene er her sortert etter størrelse (radius): **");
         for (Planet p : planets) {
             System.out.println(p);
         }
-        System.out.println("--------------------");
+
 
 
 
